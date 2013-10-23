@@ -48,21 +48,6 @@
 			}
 		}
 	?>
-	<!-- <tr>
-		<td>ID</td>
-		<td>NOMBRE</td>
-		<td>EMAIL</td>
-		<td>PASSWORD</td>
-		<td>DIRECCIÓN</td>
-		<td>TELÉFONO</td>
-		<td>TECNOLOGÍAS</td>
-		<td>MASCOTAS</td>
-		<td>LENGUAJES</td>
-		<td>CIUDAD</td>
-		<td>FOTO</td>
-		<td>OPCIONES</td>
-	</tr>
-	-->
 </table>
 
 <?php 
