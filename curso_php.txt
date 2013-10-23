@@ -1,0 +1,27 @@
+Tag único <br />
+
+Intentar configurar los directorios /config /bd /lib fuera del [document_root].
+
+En el proyecto2 hay una buena estructura de un proyecto de buenas practicas de programación (en inglés)
+
+En php un cadena de caracteres es un array de caracteres
+
+Las constantes se pueden definir tanto en MAY-MIN pero es buena práctica definirlas en MAY
+
+Las === compara valor y tipo de variable
+0==false (SI)
+0===false(NO)
+
+La coma tambien funciona para concatenar cadenas
+
+3<<2 (es elevado el número al cuadrado) = 3 * (2)2 si es 3>>2 = 3 / 2(2)
+
+Buena práctica de programación: 
+
+- escribir todos los tags en minúsculas.
+- para hacer multiidoma en un proyecto web realizarlo con los archivos ".mo" y ".po" con el poedit
+
+Para el exámen hay que leerse todo el php.net!!!
+
+
+
