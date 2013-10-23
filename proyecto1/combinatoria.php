@@ -4,10 +4,10 @@ echo "<b>COMBINATORIA</b>";
 echo "<br/>";
 
 /*
- * Si se seleccionan cinco cartas de un grupo de nueve, ¿cuantas combinaciones de cinco cartas habría?
+ * Si se seleccionan 3 bolas de billar de un grupo de 16, ¿cuantas combinaciones de 3 bolas hay?
  */
 
-echo getCombinatoria(9,5);
+echo getCombinatoria(16,3);
 
 function getCombinatoria($n,$r){
 	
