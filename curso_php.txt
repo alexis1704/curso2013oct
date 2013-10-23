@@ -23,5 +23,12 @@ Buena práctica de programación:
 
 Para el exámen hay que leerse todo el php.net!!!
 
+Motor CRUD
+
+Create
+Read
+Update
+Delete
+
 
 
