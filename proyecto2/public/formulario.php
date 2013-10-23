@@ -10,7 +10,7 @@
 	<fieldset>
 	    <legend>Formulario:</legend>
 	    <ul>
-	    
+	    	<input type="hidden" name="id" value="1">
 	    	<li>Nombre: <input type="text" name="name"></li>
 	    	<li>Email: <input type="text" name="email"></li>
 	    	<li>Password: <input type="password" name="pass"></li/>
@@ -54,7 +54,6 @@
 			
 			<li>
 				Submit <input type="submit" name="Enviar">
-				<input type="hidden" name="id" value="1">
 			</li>
 			<li>
 				Reset <input type="reset" value="Reset">
