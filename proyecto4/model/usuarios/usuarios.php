@@ -35,7 +35,12 @@ function readUserLine($line){
 	$data = explode("\n", $data);
 	$user = $data[$line];
 	$user = explode(",", $user);
-	return $user;
+	foreach($user as $value){
+		if(strpos($value, '|')!==false)
+			$value=explode("|",$value);
+		$userarray[]=$value;
+	}
+	return $userarray;
 }
 
 /**
