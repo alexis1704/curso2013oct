@@ -1,0 +1,40 @@
+<?php 
+	/*$users = array(
+		array('1','email','pass'),
+		array('2','email2','pass2'),
+	)*/
+?>
+<a href="usuarios.php?action=insert">Insertar Usuario</a>
+<table border="1">
+	<tr>
+		<th>ID</th>
+		<th>NOMBRE</th>
+		<th>EMAIL</th>
+		<th>PASSWORD</th>
+		<th>DIRECCIÓN</th>
+		<th>TELÉFONO</th>
+		<th>DESCRIPCIÓN</th>
+		<th>TECNOLOGÍAS</th>
+		<th>MASCOTAS</th>
+		<th>LENGUAJES</th>
+		<th>CIUDAD</th>
+		<th>SUBMIT</th>
+		<th>FOTO</th>
+		<th>OPCIONES</th>
+	</tr>
+	<?php foreach ($users as $key => $user):?>
+		<tr>
+		<?php foreach ($user as $value):?>
+			<td><?=$value;?></td>
+		<?php endforeach?>	
+			<td>
+				<a href='usuarios.php?action=update&line=<?=$key?>'>Update</a>
+				&nbsp;&nbsp;
+				<a href='usuarios.php?action=delete=<?=$key?>'>Delete</a>
+			</td>		
+		</tr>
+	<?php endforeach?>
+</table>
+
+
+
