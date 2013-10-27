@@ -9,11 +9,11 @@
 <form action="action.php" method="POST" enctype="multipart/form-data">
 	<fieldset>
 	    <legend>Formulario:</legend>
+	    <input type="hidden" name="id" value="1">
 	    <ul>
-	    	<input type="hidden" name="id" value="1">
 	    	<li>Nombre: <input type="text" name="name"></li>
 	    	<li>Email: <input type="text" name="email"></li>
-	    	<li>Password: <input type="password" name="pass"></li/>
+	    	<li>Password: <input type="password" name="pass"></li>
 	   		<li>Dirección: <input type="text" name="address"></li>
 	    	<li>Teléfono: <input type="text" name="phone"></li>
 	    	<li>Descripción: <textarea rows="" cols="" name="description"></textarea></li>

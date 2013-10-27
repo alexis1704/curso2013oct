@@ -16,11 +16,11 @@ switch($action){
 	include("../views/usuarios/select.phtml");
 	break;
 	case 'update':
-		
 		if($_POST){
-			
+			$file_name = subirFoto($_FILES);
+			updateUserFile($_POST,$file_name,$_GET['line']);
+			header("Location: usuarios.php");
 		}else{
-			//Tengo que rellenar los campos del formulario de la linea correspondiente
 			$user = readUserLine($_GET['line']);
 			include("../views/usuarios/insert.phtml");
 		}
@@ -30,16 +30,15 @@ switch($action){
 			$file_name = subirFoto($_FILES);
 			userToFile($_POST,$file_name);			
 			header("Location: usuarios.php");
-		}else{
-			
+		}else{			
 			include("../views/usuarios/insert.phtml");
 		}
 		
 	break;	
 	case 'delete':
-		echo "Esto es delete";
+		deleteUserFile($_GET['line']);
+		header("Location: usuarios.php");
 	break;
-	
 	default:
-	
+		header("Location: usuarios.php");	
 }

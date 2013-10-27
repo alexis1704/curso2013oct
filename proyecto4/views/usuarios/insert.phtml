@@ -13,45 +13,45 @@
 	    <ul>
 	    	<?php //operador ternario ?>
 	    	<li>Nombre: <input type="text" name="name" value="<?=(isset($user[1]))?$user[1]:'';?>"></li>
-	    	<li>Email: <input type="text" name="email"></li>
+	    	<li>Email: <input type="text" name="email" value="<?=(isset($user[2]))?$user[2]:'';?>"></li>
 	    	<li>Password: <input type="password" name="pass"></li>
-	   		<li>Dirección: <input type="text" name="address"></li>
-	    	<li>Teléfono: <input type="text" name="phone"></li>
-	    	<li>Descripción: <textarea rows="" cols="" name="description"></textarea></li>
+	   		<li>Dirección: <input type="text" name="address" value="<?=(isset($user[4]))?$user[4]:'';?>"></li>
+	    	<li>Teléfono: <input type="text" name="phone" value="<?=(isset($user[5]))?$user[5]:'';?>"></li>
+	    	<li>Descripción: <textarea rows="" cols="" name="description"><?=(isset($user[6]))?$user[6]:'';?></textarea></li>
 	    	
 	    	<li>
 	    		Tecnología:<br/>
-	    		<input type="checkbox" name="techs[]" value="php"> PHP<br/>
-				<input type="checkbox" name="techs[]" value="mysql"> MySQL<br/>
-				<input type="checkbox" name="techs[]" value="Java"> Java<br/>
+	    		<input type="checkbox" name="techs[]" value="php" <?=(isset($user[7]))?(is_array($user[7]) && in_array("php",$user[7]))?'checked':($user[7] == 'php')?'checked':'':'';?>> PHP<br/>
+				<input type="checkbox" name="techs[]" value="mysql" <?=(isset($user[7]))?(is_array($user[7]) && in_array("mysql",$user[7]))?'checked':($user[7] == 'mysql')?'checked':'':'';?>> MySQL<br/>
+				<input type="checkbox" name="techs[]" value="Java" <?=(isset($user[7]))?(is_array($user[7]) && in_array("Java",$user[7]))?'checked':($user[7] == 'Java')?'checked':'':'';?>> Java<br/>
 			</li>
 			<li>
 	    		Mascotas:<br/>
-	    		<input type="radio" name="pets" value="perro"> Perro<br/>
-				<input type="radio" name="pets" value="gato"> Gato<br/>
-				<input type="radio" name="pets" value="otros"> Otros<br/>
+	    		<input type="radio" name="pets" value="perro" <?if(isset($user[8]) && $user[8] == "perro") echo "checked";?>> Perro<br/>
+				<input type="radio" name="pets" value="gato" <?if(isset($user[8]) && $user[8] == "gato") echo "checked";?>> Gato<br/>
+				<input type="radio" name="pets" value="otros" <?if(isset($user[8]) && $user[8] == "otros") echo "checked";?>> Otros<br/>
 			</li>
 			
 			<li>
 	    		Idiomas:<br/>
 	    		<select multiple name="languages[]">
-	    			<option value="eng">Ingles</option>
-	    			<option value="fra">Francés</option>
-	    			<option value="ger">Aleman</option>
-	    			<option value="esp">Castellano</option>
+	    			<option value="eng" <?=(isset($user[9]))?(is_array($user[9]) && in_array("eng",$user[9]))?'selected':($user[9] == 'eng')?'selected':'':'';?>>Ingles</option>
+	    			<option value="fra" <?=(isset($user[9]))?(is_array($user[9]) && in_array("fra",$user[9]))?'selected':($user[9] == 'fra')?'selected':'':'';?>>Francés</option>
+	    			<option value="ger" <?=(isset($user[9]))?(is_array($user[9]) && in_array("ger",$user[9]))?'selected':($user[9] == 'ger')?'selected':'':'';?>>Aleman</option>
+	    			<option value="esp" <?=(isset($user[9]))?(is_array($user[9]) && in_array("esp",$user[9]))?'selected':($user[9] == 'esp')?'selected':'':'';?>>Castellano</option>
 	    		</select>
 			</li>
 			
 			<li>
 	    		Ciudad:<br/>
 	    		<select name="city">
-	    			<option value="zgz">Zaragoza</option>
-	    			<option value="bcn">Barcelona</option>
-	    			<option value="mad">Madrid</option>
+	    			<option value="zgz" <?if(isset($user[10]) && $user[10] == "zgz") echo "selected";?>>Zaragoza</option>
+	    			<option value="bcn" <?if(isset($user[10]) && $user[10] == "bcn") echo "selected";?>>Barcelona</option>
+	    			<option value="mad" <?if(isset($user[10]) && $user[10] == "mad") echo "selected";?>>Madrid</option>
 	    		</select>
 			</li>
 			
-			<li>Foto: <input type="file" name="photo"></li>
+			<li>Foto: <input type="file" name="photo"><?if(isset($user[12])) echo "<br/> Actual: " . $user[12];?></li>
 			
 			<li>
 				Submit <input type="submit" name="Enviar">
