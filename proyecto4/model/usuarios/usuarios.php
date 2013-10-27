@@ -78,7 +78,7 @@ function updateUserFile($array_data,$file_name,$line){
 	$user = $data[$line];
 	$user = explode(",", $user);
 	
-	if($file_name != end($user))
+	if($file_name != "" && ($file_name != end($user)))
 		 unlink($_SERVER['DOCUMENT_ROOT'] . "/uploads/".end($user));
 		
 	$cadena = "";
@@ -89,7 +89,11 @@ function updateUserFile($array_data,$file_name,$line){
 		$out[] = $value;
 	}
 
-	$out[] = $file_name;
+	if($file_name != "")
+		$out[] = $file_name;
+	else 
+		$out[] = end($user);
+	
 		
 	$cadena = implode(",",$out);
 		
