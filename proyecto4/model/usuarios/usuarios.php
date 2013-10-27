@@ -52,6 +52,8 @@ function readAllUsersFromFile(){
 
 	$data = file_get_contents('data.txt');
 	$data = explode("\n", $data); //lineas
+	
+	$data_arr = array_pop($data);
 
 	foreach ($data as $key => $value){
 		$user = explode(",", $value);	
