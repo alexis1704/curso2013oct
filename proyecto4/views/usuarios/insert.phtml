@@ -21,9 +21,9 @@
 	    	
 	    	<li>
 	    		Tecnología:<br/>
-	    		<input type="checkbox" name="techs[]" value="php" <?=(isset($user[7]))?(is_array($user[7]) && in_array("php",$user[7]))?'checked':($user[7] == 'php')?'checked':'':'';?>> PHP<br/>
-				<input type="checkbox" name="techs[]" value="mysql" <?=(isset($user[7]))?(is_array($user[7]) && in_array("mysql",$user[7]))?'checked':($user[7] == 'mysql')?'checked':'':'';?>> MySQL<br/>
-				<input type="checkbox" name="techs[]" value="Java" <?=(isset($user[7]))?(is_array($user[7]) && in_array("Java",$user[7]))?'checked':($user[7] == 'Java')?'checked':'':'';?>> Java<br/>
+	    		<input type="checkbox" name="techs[]" value="php" <?=(isset($user[7]) && in_array("php",$user[7]))?'checked':''?>> PHP<br/>
+				<input type="checkbox" name="techs[]" value="mysql" <?=(isset($user[7]) && in_array("mysql",$user[7]))?'checked':''?>> MySQL<br/>
+				<input type="checkbox" name="techs[]" value="Java" <?=(isset($user[7]) && in_array("Java",$user[7]))?'checked':''?>> Java<br/>
 			</li>
 			<li>
 	    		Mascotas:<br/>
@@ -35,10 +35,10 @@
 			<li>
 	    		Idiomas:<br/>
 	    		<select multiple name="languages[]">
-	    			<option value="eng" <?=(isset($user[9]))?(is_array($user[9]) && in_array("eng",$user[9]))?'selected':($user[9] == 'eng')?'selected':'':'';?>>Ingles</option>
-	    			<option value="fra" <?=(isset($user[9]))?(is_array($user[9]) && in_array("fra",$user[9]))?'selected':($user[9] == 'fra')?'selected':'':'';?>>Francés</option>
-	    			<option value="ger" <?=(isset($user[9]))?(is_array($user[9]) && in_array("ger",$user[9]))?'selected':($user[9] == 'ger')?'selected':'':'';?>>Aleman</option>
-	    			<option value="esp" <?=(isset($user[9]))?(is_array($user[9]) && in_array("esp",$user[9]))?'selected':($user[9] == 'esp')?'selected':'':'';?>>Castellano</option>
+	    			<option value="eng" <?=(isset($user[9]) && in_array("eng",$user[9]))?'selected':''?>>Ingles</option>
+	    			<option value="fra" <?=(isset($user[9]) && in_array("fra",$user[9]))?'selected':''?>>Francés</option>
+	    			<option value="ger" <?=(isset($user[9]) && in_array("ger",$user[9]))?'selected':''?>>Aleman</option>
+	    			<option value="esp" <?=(isset($user[9]) && in_array("esp",$user[9]))?'selected':''?>>Castellano</option>
 	    		</select>
 			</li>
 			

@@ -1,4 +1,6 @@
 <?php
+//Esto es una interface
+//Estamos usando el criterio
 
 /**
  * Write user to txt file
@@ -35,9 +37,11 @@ function readUserLine($line){
 	$data = explode("\n", $data);
 	$user = $data[$line];
 	$user = explode(",", $user);
-	foreach($user as $value){
+	foreach($user as $colum => $value){
 		if(strpos($value, '|')!==false)
 			$value=explode("|",$value);
+		elseif($colum==7 || $colum==9)
+			$value = array($value);
 		$userarray[]=$value;
 	}
 	return $userarray;
@@ -75,6 +79,9 @@ function updateUserFile($array_data,$file_name,$line){
 	$data = file_get_contents('data.txt');
 	$data = explode("\n", $data); //lineas
 	
+	//$data = readAllUsersFromFile();
+	//die("para aqui");
+	
 	$user = $data[$line];
 	$user = explode(",", $user);
 	
@@ -98,8 +105,7 @@ function updateUserFile($array_data,$file_name,$line){
 	$cadena = implode(",",$out);
 		
 	$data[$line] = $cadena;
-		
-		
+			
 	$data = implode("\n", $data);
 		
 	file_put_contents ("data.txt" ,$data);	

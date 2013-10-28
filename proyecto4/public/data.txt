@@ -1,3 +1,2 @@
 1,Raul,r@r.com,54321,sasa,42343,qwqs,php|Java,perro,eng|esp,mad,Enviar,Forest.jpg
 1,Sasa,sa@sa.com,12345,qwert,09876,poiuy,php,perro,eng,zgz,Enviar,Humpback Whale.jpg
-1,a,a,,2,q,wsxs,Java,perro,eng,zgz,Enviar,Dock.jpg
