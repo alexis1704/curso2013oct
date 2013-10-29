@@ -4,7 +4,7 @@
 		array('2','email2','pass2'),
 	)*/
 ?>
-<a href="usuarios.php?action=insert">Insertar Usuario</a>
+<a href="?controller=usuarios&action=insert">Insertar Usuario</a>
 <table border="1">
 	<tr>
 		<th>ID</th>
@@ -28,9 +28,9 @@
 			<td><?=$value;?></td>
 		<?php endforeach?>	
 			<td>
-				<a href='usuarios.php?action=update&line=<?=$key?>'>Update</a>
+				<a href='?controller=usuarios&action=update&line=<?=$key?>'>Update</a>
 				&nbsp;&nbsp;
-				<a href='usuarios.php?action=delete&line=<?=$key?>'>Delete</a>
+				<a href='?controller=usuarios&action=delete&line=<?=$key?>'>Delete</a>
 			</td>		
 		</tr>
 	<?php endforeach?>
