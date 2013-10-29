@@ -49,10 +49,9 @@ switch($action){
 	break;	
 	case 'delete':	
 		if($_POST){
-			if($_POST['borrar'] == 'Si'){
+			if($_POST['borrar'] == 'Si')
 				deleteUserFile($_POST['line']);
-				header("Location: usuarios.php");
-			}
+			header("Location: usuarios.php");			
 		}else{
 			$user = readUserLine($_GET['line']);
 			include("../views/usuarios/delete.phtml");
